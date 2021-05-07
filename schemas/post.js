@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -16,12 +21,6 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
     },
     {
       name: 'mainImage',
@@ -32,10 +31,16 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      name: 'mainCategory',
+      title: 'Main Category',
+      type: 'reference',
+      to: {type: 'category'},
+    },
+    {
+      name: 'subCategory',
+      title: 'Sub Category',
+      type: 'reference',
+      to: {type: 'subCategory'},
     },
     {
       name: 'publishedAt',
@@ -43,18 +48,19 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'credits',
+      title: 'Credits',
+      type: 'string',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
     },
     {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags'
-      }
+      name: 'artistLink',
+      title: 'Artist Link',
+      type: 'text'
     }
   ],
 
