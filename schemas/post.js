@@ -24,7 +24,15 @@ export default {
     },
     {
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Main Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'previewImage',
+      title: 'Preview Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -60,20 +68,22 @@ export default {
     {
       name: 'artistLink',
       title: 'Artist Link',
-      type: 'text'
+      type: 'blockContent'
     }
   ],
 
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
       media: 'mainImage',
+      date: 'publishedAt'
     },
     prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
+      const {title, date, media} = selection
+      return ( {
+        media: media,
+        title: title,
+        subtitle: `${date.split('-')[0]}/${date.split('-')[1]}`,
       })
     },
   },
