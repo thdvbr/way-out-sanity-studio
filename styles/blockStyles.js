@@ -8,7 +8,7 @@ export const mainStyle = (props) => {
         fontFamily: 'Averia Serif Regular',
         fontSize: '1.2em',
         fontWeight: 500,
-        lineHeight: '1.5em',
+        lineHeight: '1.4em',
       }}>
       {props.children}
     </span>
@@ -27,6 +27,19 @@ export const secondaryStyle = (props) => {
     </span>
   );
 };
+export const secondaryBoldStyle = (props) => {
+  return (
+    <span
+    style={{
+      fontFamily: 'Agrandir Bold',
+      fontSize: '1.4em',
+      fontWeight: 500,
+      lineHeight: '1.315em',
+    }}>
+    {props.children}
+  </span>
+  )
+}
 
 export const introStyle = (props) => {
   return (
@@ -34,9 +47,22 @@ export const introStyle = (props) => {
       style={{
         fontFamily: 'OPTIArtCraft',
         fontSize: '1.375em',
-        lineHeight: '1.625em',
+        lineHeight: '1.315em',
       }}>
       {props.children}
     </span>
   );
 };
+
+export const copenhagenGrotesk = (props) => {
+  return (
+    <span
+    style={{
+      fontFamily: 'Copenhagen Grotesk',
+      fontSize: '0.9em',
+      lineHeight: '1em',
+    }}>
+    {props.children}
+  </span>
+  )
+}

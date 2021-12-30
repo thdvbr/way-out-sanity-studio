@@ -12,10 +12,25 @@
 
 @font-face {
   font-family: 'Agrandir';
-  src: url(../assets/typography/Agrandir-Regular.otf);
+  src: url(../assets/typography/Agrandir-Narrow.otf);
+}
+
+@font-face {
+  font-family: 'Agrandir Bold';
+  src: url(../assets/typography/Agrandir-TextBold.otf);
 }
 
 @font-face {
   font-family: 'OPTIArtCraft';
   src: url(../assets/typography/OPTIArtCraft-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Copenhagen Grotesk';
+  src: url(../assets/typography/CopenhagenGrotesk.otf);
+}
+
+@font-face {
+  font-family: 'Copenhagen Grotesk Light';
+  src: url(../assets/typography/CopenhagenGrotesk-light.otf);
 }
