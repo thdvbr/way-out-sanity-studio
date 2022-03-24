@@ -25,9 +25,9 @@ export default createSchema({
     post,
     page,
     staff,
+    ad,
     category,
     subCategory,
-    ad,
     adCategory,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

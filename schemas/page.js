@@ -1,7 +1,9 @@
+import { ImFileEmpty } from 'react-icons/im';
 export default {
     name: 'page',
     type: 'document',
     title: 'Page',
+    icon: ImFileEmpty,
     fields: [
         {
             name: 'title',

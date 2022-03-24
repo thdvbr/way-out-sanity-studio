@@ -1,7 +1,9 @@
+import { ImPacman } from 'react-icons/im'
 export default {
     name: 'ad',
     title: 'Ad',
     type: 'document',
+    icon: ImPacman,
     fields: [
         {
             name: 'title',
