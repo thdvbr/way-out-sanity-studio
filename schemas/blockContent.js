@@ -36,11 +36,15 @@ export default {
         },
         { title: 'OPTIArtCraft', value: 'optiArtCraft', blockEditor: { render: introStyle } },
         { title: 'Copenhagen Grotesk', value: 'copenhagenGrotesk', blockEditor: { render: copenhagenGrotesk } },
-        { title: 'Quote', value: 'quote', blockEditor: {render: quoteStyle}}
+        { title: 'Quote', value: 'quote', blockEditor: {render: quoteStyle}},
         // { title: 'Normal', value: 'normal' },
-        // { title: 'H1', value: 'h1' },
+        { title: 'H2', value: 'h2', blockEditor: {
+          render: mainStyle,
+        }, },
         // { title: 'H2', value: 'h2' },
-        // { title: 'H3', value: 'h3' },
+        { title: 'H3', value: 'h3' , blockEditor: {
+          render: mainStyle,
+        },},
         // { title: 'H4', value: 'h4' },
         // { title: 'Quote', value: 'blockquote' },
       ],
