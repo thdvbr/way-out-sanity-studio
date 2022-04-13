@@ -1,4 +1,4 @@
-import { mainStyle, secondaryStyle, secondaryBoldStyle, introStyle, copenhagenGrotesk } from '../styles/blockStyles';
+import { mainStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles';
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -23,30 +23,26 @@ export default {
       // use your content.
       styles: [
         {
-          title: 'Main',
-          value: 'main',
+          title: 'Averia Serif',
+          value: 'averiaSerif',
           blockEditor: {
             render: mainStyle,
           },
         },
         {
-          title: 'Secondary',
-          value: 'secondary',
+          title: 'Agrandir Narrow',
+          value: 'agrandirNarrow',
           blockEditor: { render: secondaryStyle },
         },
-        {
-          title: 'Secondary Bold',
-          value: 'secondary bold',
-          blockEditor: { render: secondaryBoldStyle },
-        },
-        { title: 'Intro', value: 'intro', blockEditor: { render: introStyle } },
-        { title: 'Copenhagen Grotesk', value:'copenhagenGrotesk', blockEditor: { render: copenhagenGrotesk } },
-        { title: 'Normal', value: 'normal' },
-        { title: 'H1', value: 'h1' },
-        { title: 'H2', value: 'h2' },
-        { title: 'H3', value: 'h3' },
-        { title: 'H4', value: 'h4' },
-        { title: 'Quote', value: 'blockquote' },
+        { title: 'OPTIArtCraft', value: 'optiArtCraft', blockEditor: { render: introStyle } },
+        { title: 'Copenhagen Grotesk', value: 'copenhagenGrotesk', blockEditor: { render: copenhagenGrotesk } },
+        { title: 'Quote', value: 'quote', blockEditor: {render: quoteStyle}}
+        // { title: 'Normal', value: 'normal' },
+        // { title: 'H1', value: 'h1' },
+        // { title: 'H2', value: 'h2' },
+        // { title: 'H3', value: 'h3' },
+        // { title: 'H4', value: 'h4' },
+        // { title: 'Quote', value: 'blockquote' },
       ],
       lists: [{ title: 'Bullet', value: 'bullet' }],
       // Marks let you mark up inline text in the block editor.
@@ -57,7 +53,8 @@ export default {
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
           { title: 'Underline', value: 'underline' },
-          { title: 'Strike', value: 'strike-through'}
+          { title: 'Strike', value: 'strike-through' },
+          { title: 'Speaker', value: 'secondary', blockEditor: { render: secondaryStyle },}
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
