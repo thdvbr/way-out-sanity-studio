@@ -3,6 +3,7 @@ export default {
     name: 'ad',
     title: 'Ad',
     type: 'document',
+    description: 'Remove old ads from the list you dont want to display',
     icon: ImPacman,
     fields: [
         {
@@ -20,11 +21,12 @@ export default {
         },
         {
             name: 'adImageMobile',
-            title: 'Ad Image - Mobile (Only for bottom ads)',
+            title: 'Ad Image - Mobile',
             type: 'image',
             options: {
               hotspot: true,
             },
+            description: 'Only for bottom ads'
         },
         {
             title: 'Ad URL',
@@ -35,7 +37,8 @@ export default {
             name: 'adCategory',
             title: 'Ad Category',
             type: 'reference',
-            to: { type: 'adCategory'}
+            to: { type: 'adCategory' },
+            description: 'Select between side ad and bottom ad'
         },
     ]
 
