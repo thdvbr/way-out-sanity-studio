@@ -8,6 +8,9 @@ export default {
         title: 'Title',
         type: 'string',
       },
-    ],
+  ],
+  readOnly: ({currentUser}) => {
+    return !(currentUser.roles.find(({name}) => name === 'administrator'))
+  },
   }
   

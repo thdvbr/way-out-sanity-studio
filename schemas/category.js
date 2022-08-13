@@ -2,6 +2,9 @@ export default {
   name: 'category',
   title: 'Category',
   type: 'document',
+  readOnly: ({currentUser}) => {
+    return !(currentUser.roles.find(({name}) => name === 'administrator'))
+  },
   fields: [
     {
       name: 'title',
