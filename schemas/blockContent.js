@@ -1,4 +1,4 @@
-import { mainStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles';
+import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles';
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -58,7 +58,7 @@ export default {
           { title: 'Emphasis', value: 'em' },
           { title: 'Underline', value: 'underline' },
           { title: 'Strike', value: 'strike-through' },
-          { title: 'Speaker', value: 'secondary', blockEditor: { render: secondaryStyle },}
+          { title: 'Speaker', value: 'secondary', blockEditor: { render: speakerStyle },}
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
