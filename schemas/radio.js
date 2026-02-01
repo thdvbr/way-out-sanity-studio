@@ -43,6 +43,12 @@ export default {
       type: 'datetime',
       description: 'Pick the day, month, and year this radio show goes live',
     },
+    {
+      name: 'episodeNumber',
+      title: 'Episode Number',
+      type: 'number',
+      description: 'Pick the episode number for the show'
+    },
 
     {
       name: 'mixcloudUrl',
@@ -81,16 +87,19 @@ export default {
   preview: {
     select: {
       title: 'title',
+      subtitle: 'subtitle',
+      episodeNumber: 'episodeNumber',
       media: 'heroImage',
       date: 'publishedAt',
     }
   },
   prepare(selection) {
-    const { title, subtitle, media } = selection;
+    const { title, subtitle, episodeNumber, media ,date } = selection;
     return {
       title: title || 'Untitled',
-      subtitle: subtitle,
-      media: media
+      subtitle: `Episode ${episodeNumber}. ${subtitle}`,
+      media: media,
+
     };
   }
 }
