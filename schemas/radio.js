@@ -44,10 +44,12 @@ export default {
       description: 'Pick the day, month, and year this radio show goes live',
     },
     {
-      name: 'episodeNumber',
-      title: 'Episode Number',
-      type: 'number',
-      description: 'Pick the episode number for the show'
+      name: 'episodeLabel',
+      title: 'Episode Label',
+      type: 'string',
+      description: 'Pick the episode label for the show. Ex) Episode 1.',
+      validation: Rule => Rule.max(50).warning(`A label shouldn't be more than 50 characters.`)
+      
     },
 
     {
@@ -88,16 +90,16 @@ export default {
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      episodeNumber: 'episodeNumber',
+      episodeLabel: 'episodeLabel',
       media: 'heroImage',
       date: 'publishedAt',
     }
   },
   prepare(selection) {
-    const { title, subtitle, episodeNumber, media ,date } = selection;
+    const { title, subtitle, episodeLabel, media ,date } = selection;
     return {
       title: title || 'Untitled',
-      subtitle: `Episode ${episodeNumber}. ${subtitle}`,
+      subtitle: episodeLabel,
       media: media,
 
     };
