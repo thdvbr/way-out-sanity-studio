@@ -41,7 +41,7 @@ export default {
       name: 'publishedAt',
       title: 'Publish Date',
       type: 'datetime',
-      description: 'Pick the day, month, and year this radio show goes live',
+      description: 'Pick the day, month, and year this radio show goes live. Shows are sorted by date, newest first',
     },
     {
       name: 'episodeLabel',
