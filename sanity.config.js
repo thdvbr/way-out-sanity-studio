@@ -44,14 +44,15 @@ export default defineConfig({
   document: {
     productionUrl: async (prev, context) => {
       const {document} = context
-      const slug = document?.slug?.current
+          const slug = document?.slug?.current
+          const type = document?._type  // Get the document type
       
       if (!slug) return prev
       
       const projectUrl = process.env.SANITY_STUDIO_PROJECT_URL
       const previewSecret = process.env.SANITY_STUDIO_PREVIEW_SECRET
       
-      return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${slug}`
+      return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${slug}&type=${type}`
     },
   },
 })
