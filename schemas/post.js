@@ -79,12 +79,13 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-      description: 'Day, Month, and Year of article post.',
+      description: 'This is needed to sort the articles by date. It won’t show on the article itself',
     },
     {
       name: 'credits',
       title: 'Credits',
-      type: 'string',
+      type: 'text',
+      rows: 3,  
       description:
         '[ Optional ] Open format entry for any credits (writing, photos, etc) ',
     },
@@ -97,11 +98,41 @@ export default {
     },
     {
       name: 'artistLink',
-      title: 'Artist Link',
-      type: 'blockContent',
+      title: 'Connect Here',
+      type: 'text',
+      rows: 5,  
       description:
-        'Here is where you enter whatever custom links you want to include about the topic of your post (website, person’s social media, etc)   ',
+        'Here is where you enter whatever custom links you want to include about the topic of your post (website, shop link etc)   ',
     },
+    {
+  name: 'socialLinks',
+  title: 'Social Links',
+  type: 'object',
+  fields: [
+    {
+      name: 'facebook',
+      title: 'Facebook URL',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        scheme: ['http', 'https']
+      })
+    },
+    {
+      name: 'instagram',
+      title: 'Instagram URL',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        scheme: ['http', 'https']
+      })
+    },
+    {
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+      validation: Rule => Rule.email()
+    }
+  ]
+}
   ],
 
   preview: {
