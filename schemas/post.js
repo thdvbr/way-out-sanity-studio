@@ -12,6 +12,7 @@ export default {
       type: 'string',
       description:
         'Be sure to check the length and formatting for your title in the preview',
+      validation: (rule) => rule.required().error('Title is required before publishing'),
     },
     {
       name: 'subtitle',
@@ -19,6 +20,7 @@ export default {
       type: 'string',
       description:
         'Be sure to check the length and formatting for your subtitle in the preview',
+      validation: (rule) => rule.required().error('Subtitle is required before publishing'),
     },
     {
       name: 'slug',
@@ -29,6 +31,7 @@ export default {
         maxLength: 96,
       },
       description: 'Custom hyperlink text',
+      validation: (rule) => rule.required().error('Slug is required before publishing'),
     },
     {
       name: 'mainImage',
@@ -66,6 +69,7 @@ export default {
       to: { type: 'category' },
       description:
         'Dropdown selects the menu category in which the article appears (Interview, Reviews, Radio)',
+      validation: (rule) => rule.required().error('Main Category is required before publishing'),
     },
     {
       name: 'subCategory',
@@ -74,12 +78,14 @@ export default {
       to: { type: 'subCategory' },
       description:
         'Subcategories can be custom added at any time. They appear at the top of the articles  in the ‘more to read’ area of the site.',
+      validation: (rule) => rule.required().error('Sub Category is required before publishing'),
     },
     {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
       description: 'This is needed to sort the articles by date. It won’t show on the article itself',
+      validation: (rule) => rule.required().error('Date is required before publishing'),
     },
     {
       name: 'credits',
@@ -110,6 +116,12 @@ export default {
           type: 'string',
           description: 'e.g., "SHOP", "X"'
         },
+          {
+          name: 'displayText',
+          title: 'Display Text',
+          type: 'string',
+          description: 'Short text to show (e.g., "@tabloidpress" or "Big Cartel")'
+        },
         {
           name: 'url',
           title: 'URL',
@@ -120,7 +132,7 @@ export default {
       preview: {
         select: {
           title: 'label',
-          subtitle: 'url'
+          subtitle: 'displayText'
         }
       }
     }
