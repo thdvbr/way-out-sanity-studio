@@ -97,13 +97,35 @@ export default {
         'Here is where you will enter the article text, photos, and links. \n• Intro Font: OptiArtCraft Bold\n • Speaker Font: Bold S Icon\n• Interview Question Font: Agrandir Narrow\n • Interviewee Response Font: Averia Serif\n • Centered Quote Font: Quote \n  • Artist Link Font - Normal',
     },
     {
-      name: 'artistLink',
-      title: 'Connect Here',
-      type: 'text',
-      rows: 5,  
-      description:
-        'Here is where you enter whatever custom links you want to include about the topic of your post (website, shop link etc)   ',
-    },
+  name: 'externalLinks',
+  title: 'External Links',
+  type: 'array',
+  of: [
+    {
+      type: 'object',
+      fields: [
+        {
+          name: 'label',
+          title: 'Label',
+          type: 'string',
+          description: 'e.g., "SHOP", "X"'
+        },
+        {
+          name: 'url',
+          title: 'URL',
+          type: 'url',
+          description: 'Full URL including https://'
+        },
+      ],
+      preview: {
+        select: {
+          title: 'label',
+          subtitle: 'url'
+        }
+      }
+    }
+  ]
+},
     {
   name: 'socialLinks',
   title: 'Social Links',
