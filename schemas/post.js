@@ -79,12 +79,13 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-      description: 'Day, Month, and Year of article post.',
+      description: 'This is needed to sort the articles by date. It won’t show on the article itself',
     },
     {
       name: 'credits',
       title: 'Credits',
-      type: 'string',
+      type: 'text',
+      rows: 3,  
       description:
         '[ Optional ] Open format entry for any credits (writing, photos, etc) ',
     },
@@ -96,12 +97,64 @@ export default {
         'Here is where you will enter the article text, photos, and links. \n• Intro Font: OptiArtCraft Bold\n • Speaker Font: Bold S Icon\n• Interview Question Font: Agrandir Narrow\n • Interviewee Response Font: Averia Serif\n • Centered Quote Font: Quote \n  • Artist Link Font - Normal',
     },
     {
-      name: 'artistLink',
-      title: 'Artist Link',
-      type: 'blockContent',
-      description:
-        'Here is where you enter whatever custom links you want to include about the topic of your post (website, person’s social media, etc)   ',
+  name: 'externalLinks',
+  title: 'External Links',
+  type: 'array',
+  of: [
+    {
+      type: 'object',
+      fields: [
+        {
+          name: 'label',
+          title: 'Label',
+          type: 'string',
+          description: 'e.g., "SHOP", "X"'
+        },
+        {
+          name: 'url',
+          title: 'URL',
+          type: 'url',
+          description: 'Full URL including https://'
+        },
+      ],
+      preview: {
+        select: {
+          title: 'label',
+          subtitle: 'url'
+        }
+      }
+    }
+  ]
+},
+    {
+  name: 'socialLinks',
+  title: 'Social Links',
+  type: 'object',
+  fields: [
+    {
+      name: 'facebook',
+      title: 'Facebook URL',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        scheme: ['http', 'https']
+      })
     },
+    {
+      name: 'instagram',
+      title: 'Instagram URL',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        scheme: ['http', 'https']
+      })
+    },
+    {
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+      validation: Rule => Rule.email()
+    }
+  ]
+}
   ],
 
   preview: {
