@@ -1,4 +1,4 @@
-import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles.jsx';
+import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle} from '../styles/blockStyles.jsx';
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -35,6 +35,11 @@ export default {
           blockEditor: { render: secondaryStyle },
         },
         { title: 'OPTIArtCraft', value: 'optiArtCraft', blockEditor: { render: introStyle } },
+        { 
+          title: 'OPTIArtCraft with Drop Cap',  // New style!
+          value: 'optiArtCraftDropCap', 
+          blockEditor: { render: introStyle }  // Same preview in editor
+        },
         { title: 'Copenhagen Grotesk', value: 'copenhagenGrotesk', blockEditor: { render: copenhagenGrotesk } },
         { title: 'Quote', value: 'quote', blockEditor: {render: quoteStyle}},
         // { title: 'Normal', value: 'normal' },
