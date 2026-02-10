@@ -31,7 +31,12 @@ export default {
         maxLength: 96,
       },
       description: 'Custom hyperlink text',
-      validation: (rule) => rule.required().error('Slug is required before publishing'),
+      validation: (rule) => rule.required().error('Slug is required before publishing').custom((slug) => {
+        if (slug?.current && /\s/.test(slug.current)) {
+          return 'Slug cannot contain spaces';
+        }
+        return true;
+      }),
     },
     {
       name: 'mainImage',
