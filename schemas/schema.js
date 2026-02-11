@@ -15,6 +15,8 @@ import ad from './ad';
 import adCategory from './adCategory';
 import youtube from './youtube'; 
 import radio from './radio';
+import listicleItem from './listicleItem';
+import listicleBlockContent from './listicleBlockContent';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,6 +34,8 @@ export default createSchema({
     category,
     subCategory,
     adCategory,
+    listicleBlockContent,  
+    listicleItem,   
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

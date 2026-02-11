@@ -1,8 +1,11 @@
 // schemas/radio.js
+import {PlayIcon} from '@sanity/icons'
+
 export default {
   name: 'radio',
   title: 'Radio Show',
   type: 'document',
+  icon: PlayIcon,
   fields: [
     {
       name: 'title',

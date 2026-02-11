@@ -1,4 +1,5 @@
-import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle} from '../styles/blockStyles.jsx';
+import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles.jsx';
+import { ImageIcon, VideoIcon, ThListIcon } from '@sanity/icons'
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -54,6 +55,7 @@ export default {
         // { title: 'Quote', value: 'blockquote' },
       ],
       lists: [{ title: 'Bullet', value: 'bullet' }],
+      
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -85,11 +87,13 @@ export default {
         ],
       },
     },
+    
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
+         {
       type: 'image',
+      icon: ImageIcon,
       options: { hotspot: true, metadata: ['lqip']},
       fields: [
         {
@@ -103,7 +107,12 @@ export default {
       ]
     },
     {
-      type: 'youtube'
+      type: 'youtube',
+      icon: VideoIcon
+    },
+    {
+      type: 'listicleItem',
+      icon: ThListIcon
     }
   ],
 };

@@ -12,6 +12,8 @@ import ad from './schemas/ad'
 import adCategory from './schemas/adCategory'
 import youtube from './schemas/youtube.jsx'
 import radio from './schemas/radio'
+import listicleBlockContent from './schemas/listicleBlockContent'  
+import listicleItem from './schemas/listicleItem'  
 
 export default defineConfig({
   name: 'default',
@@ -29,15 +31,18 @@ export default defineConfig({
     types: [
           // Schema types go here
       post,
+      radio,
       page,
       staff,
       ad,
       category,
       subCategory,
       adCategory,
+      listicleBlockContent,  
+      listicleItem,       
       blockContent,
       youtube,
-      radio,
+
     ],
     },
   
