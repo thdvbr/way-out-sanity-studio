@@ -171,7 +171,15 @@ export default {
       validation: Rule => Rule.email()
     }
   ]
-}
+    },
+          {
+      name: 'featured',
+      title: 'Feature on Homepage',
+      type: 'boolean',
+      description: 'Pin this to the top of the homepage',
+      initialValue: false,
+    }
+,
   ],
 
   preview: {

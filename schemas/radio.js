@@ -32,6 +32,15 @@ export default {
         maxLength: 96,
       },
     },
+        {
+      name: 'subCategory',
+      title: 'Sub Category',
+      type: 'reference',
+      to: { type: 'subCategory' },
+      description:
+        'Subcategories can be custom added at any time. They appear at the top of the articles  in the ‘more to read’ area of the site.',
+      validation: (rule) => rule.required().error('Sub Category is required before publishing'),
+    },
     {
       name: 'heroImage',
       title: 'Hero Image',
@@ -87,7 +96,16 @@ export default {
       options: {
         layout: 'tags'
       }
+    },
+      
+    {
+      name: 'featured',
+      title: 'Feature on Homepage',
+      type: 'boolean',
+      description: 'Pin this to the top of the homepage',
+      initialValue: false,
     }
+,
   ],
   preview: {
     select: {
