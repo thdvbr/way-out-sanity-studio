@@ -10,13 +10,15 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'text',
+      rows: 3,
       validation: Rule => Rule.required()
     },
     {
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'string'
+      type: 'text',
+      rows: 3,
     },
         {
       name: 'description',

@@ -9,7 +9,8 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'text',
+      rows: 3,
       description:
         'Be sure to check the length and formatting for your title in the preview',
       validation: (rule) => rule.required().error('Title is required before publishing'),
@@ -17,7 +18,8 @@ export default {
     {
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'string',
+      type: 'text',
+      rows: 4,
       description:
         'Be sure to check the length and formatting for your subtitle in the preview',
       validation: (rule) => rule.required().error('Subtitle is required before publishing'),
