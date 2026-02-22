@@ -1,5 +1,6 @@
 import { ImNewspaper } from 'react-icons/im';
 
+
 export default {
   name: 'post',
   title: 'Post',
@@ -178,7 +179,7 @@ export default {
       name: 'featured',
       title: 'Feature on Homepage',
       type: 'boolean',
-      description: 'Pin this to the top of the homepage',
+      description: 'Pin this to the top of the homepage.',
       initialValue: false,
     }
 ,
@@ -189,12 +190,13 @@ export default {
       title: 'title',
       media: 'mainImage',
       date: 'publishedAt',
+      featured: 'featured', 
     },
     prepare(selection) {
-      const { title, date, media } = selection;
+      const { title, date, media, featured } = selection;
       return {
         media: media,
-        title: title,
+        title: featured ? `⭐ ${title}` : title, 
         subtitle: `${date.split('-')[0]}/${date.split('-')[1]}`,
       };
     },

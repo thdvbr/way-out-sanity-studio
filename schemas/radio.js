@@ -20,7 +20,7 @@ export default {
       type: 'text',
       rows: 3,
     },
-        {
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -34,7 +34,7 @@ export default {
         maxLength: 96,
       },
     },
-        {
+    {
       name: 'subCategory',
       title: 'Sub Category',
       type: 'reference',
@@ -50,7 +50,7 @@ export default {
       options: {
         hotspot: true
       }
-      },
+    },
     {
       name: 'publishedAt',
       title: 'Publish Date',
@@ -107,7 +107,7 @@ export default {
       description: 'Pin this to the top of the homepage',
       initialValue: false,
     }
-,
+    ,
   ],
   preview: {
     select: {
@@ -116,15 +116,15 @@ export default {
       episodeLabel: 'episodeLabel',
       media: 'heroImage',
       date: 'publishedAt',
+      featured: 'featured',
+    },
+    prepare(selection) {  // ← should be inside preview, not after the closing }
+      const { title, episodeLabel, media, featured } = selection;
+      return {
+        title: featured ? `⭐ ${title}` : title,
+        subtitle: episodeLabel,
+        media: media,
+      };
     }
-  },
-  prepare(selection) {
-    const { title, subtitle, episodeLabel, media ,date } = selection;
-    return {
-      title: title || 'Untitled',
-      subtitle: episodeLabel,
-      media: media,
-
-    };
   }
 }
