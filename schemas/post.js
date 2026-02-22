@@ -108,7 +108,7 @@ export default {
       title: 'Body',
       type: 'blockContent',
       description:
-        'Here is where you will enter the article text, photos, and links. \n• Intro Font: OptiArtCraft Bold\n • Speaker Font: Bold S Icon\n• Interview Question Font: Agrandir Narrow\n • Interviewee Response Font: Averia Serif\n • Centered Quote Font: Quote \n  • Artist Link Font - Normal',
+        'Here is where you will enter the article text, photos, and links. \n• Shift+Enter = line break within same paragraph (no extra spacing)\n• Enter = new paragraph (adds spacing)\n• Intro Font: OptiArtCraft Bold\n • Speaker Font: Bold S Icon\n• Interview Question Font: Agrandir Narrow\n • Interviewee Response Font: Averia Serif\n • Centered Quote Font: Quote \n  • Artist Link Font - Normal',
     },
     {
   name: 'externalLinks',
