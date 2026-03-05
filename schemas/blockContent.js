@@ -103,7 +103,18 @@ export default {
           options: {
             isHighlighted: true
           }
-        }
+        },
+        {
+      name: 'link',
+      type: 'url',
+      title: 'Link',
+      options: {
+        isHighlighted: true
+      },
+      validation: Rule => Rule.uri({
+        scheme: ['http', 'https', 'mailto', 'tel']
+      }).optional()
+    }
       ]
     },
     {
