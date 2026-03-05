@@ -15,6 +15,7 @@ import youtube from './schemas/youtube.jsx';
 import radio from './schemas/radio.js';
 import listicleBlockContent from './schemas/listicleBlockContent.js';
 import listicleItem from './schemas/listicleItem.js';
+import mixcloud from './schemas/mixcloud.jsx';
 
 const GlobalEditorStyles = createGlobalStyle`
   [data-ui="Flex"][data-as="div"]:has([data-text]) {
@@ -59,6 +60,7 @@ export default defineConfig({
       listicleItem,
       blockContent,
       youtube,
+      mixcloud,
     ],
   },
 

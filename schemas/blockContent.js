@@ -1,5 +1,6 @@
 import { mainStyle, speakerStyle, secondaryStyle, introStyle, copenhagenGrotesk, quoteStyle } from '../styles/blockStyles.jsx';
 import { ImageIcon, VideoIcon, ThListIcon } from '@sanity/icons'
+import { IoMdMusicalNotes } from "react-icons/io";
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -120,6 +121,10 @@ export default {
     {
       type: 'youtube',
       icon: VideoIcon
+    },
+    {
+      type: 'mixcloud',
+      icon: IoMdMusicalNotes
     },
     {
       type: 'listicleItem',
