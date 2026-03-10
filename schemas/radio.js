@@ -20,11 +20,35 @@ export default {
       type: 'text',
       rows: 3,
     },
+{
+  name: 'description',
+  title: 'Description',
+  type: 'array',
+  of: [
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      type: 'block',
+      styles: [{ title: 'Normal', value: 'normal' }], // strip headings etc if you want minimal
+      lists: [],
+      marks: {
+        decorators: [], // no bold/italic if you want clean
+        annotations: [
+          {
+            name: 'link',
+            type: 'object',
+            title: 'Link',
+            fields: [
+              {
+                name: 'href',
+                type: 'url',
+                title: 'URL',
+              },
+            ],
+          },
+        ],
+      },
     },
+  ],
+},
     {
       name: 'slug',
       title: 'Slug',
