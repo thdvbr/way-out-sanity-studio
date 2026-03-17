@@ -1,6 +1,6 @@
 export default {
     name: 'adCategory',
-    title: 'Ad Category',
+    title: 'Ad Category (🔒 Read-only)',
     type: 'document',
     fields: [
       {

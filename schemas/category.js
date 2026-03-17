@@ -1,6 +1,6 @@
 export default {
   name: 'category',
-  title: 'Category',
+  title: 'Category (🔒 Read-only)',
   type: 'document',
   readOnly: ({currentUser}) => {
     return !(currentUser.roles.find(({name}) => name === 'administrator'))
@@ -10,11 +10,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      description: '🔒 Read-only — contact dev to make changes.',
     },
   ],
 }

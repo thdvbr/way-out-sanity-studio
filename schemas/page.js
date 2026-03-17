@@ -9,11 +9,15 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
+      readOnly: true,
+      description: '🔒 Do not edit — changing the title affects SEO and routing.',
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
+      readOnly: true,
+      description: '🔒 Do not edit — this is the live URL path.',
       option: {
         source: 'title',
         maxLength: 96,
