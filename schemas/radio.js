@@ -76,6 +76,13 @@ export default {
       }
     },
     {
+  name: 'previewImage',
+  type: 'image',
+  title: 'Preview Image',
+  description: 'Optional. Image shown on the landing page grid. Uses the hero image if empty.',
+  options: { hotspot: true, metadata: ['lqip'] },
+},
+    {
       name: 'publishedAt',
       title: 'Publish Date',
       type: 'datetime',
