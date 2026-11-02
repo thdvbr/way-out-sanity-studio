@@ -71,7 +71,13 @@ export default {
       validation: Rule => Rule.uri({
         scheme: ['http', 'https', 'mailto', 'tel']
       }).optional()
-    }
+        },
+                        {
+  name: 'fullWidth',
+  type: 'boolean',
+  title: 'Full width (ignore responsive sizing)',
+  options: { isHighlighted: true },
+},
       ]
     },
     {
